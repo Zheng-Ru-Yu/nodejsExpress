@@ -1,0 +1,10 @@
+#container{
+    width: 350px;
+    height:200px;
+    border: solid 1px black;
+    padding: 50px;
+    margin: 100px auto;
+}
+.erro{
+    color: red;
+}

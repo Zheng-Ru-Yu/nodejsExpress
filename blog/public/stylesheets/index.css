@@ -1,0 +1,39 @@
+header{
+    height: 50px;
+    line-height: 50px;
+    background: #cccccc;
+}
+#logo{
+    float: left;
+}
+#login-info{
+    float: right;
+}
+.wrapper{
+    width: 1170px;
+    margin: 0 auto;
+}
+#content{
+    margin-top: 20px;
+}
+#blog-list{
+    width: 75%;
+    float: left;
+}
+#user-list{
+    width: 20%;
+    float: right;
+    background: #00ff00;
+}
+#blog-left{
+    width: 75%;
+    float: left;
+}
+#blog-right{
+    width: 20%;
+    float: right;
+}
+.blog{
+    height: 100px;
+    margin-bottom: 20px;
+}

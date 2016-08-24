@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
+    <title>Document</title>
+</head>
+<body>
+<header id="header">
+    <div class="wrapper">
+        <div id="logo">LOGO</div>
+        <div id="login-info">
+            <%
+            if(user){
+            %>
+            欢迎，<%= user.user_name%>，<a href="/logout">退出</a>
+            <%
+            }else{
+            %>
+            <a href="/login">登录</a> | <a href="/regist">注册</a>
+            <%
+            }
+            %>
+        </div>
+    </div>
+</header>
+
+<div id="content" class="wrapper">
+    <div id="blog-list">
+        <ul>
+            <%
+            for(var i=0; i<blogs.length; i++){
+                var blog = blogs[i];
+            %>
+            <li class="blog">
+                <div id="blog-left">
+                    <h2 class="blog-title">
+                        <a href="/view?blogId=<%=blog.blog_id%>"><%=blog.title%></a>
+                    </h2>
+                    <p class="blog-content"><%=blog.content%></p>
+                </div>
+                <div id="blog-right">
+                    <p class="blog-author"><%=blog.user_name%></p>
+                    <p class="blog-add-time"><%=blog.add_time%></p>
+                    <%
+                    if(user && user.user_id == blog.author){
+                    %>
+                    <p class="del">
+                        <a href="#">删除</a>
+                    </p>
+                    <%
+                    }
+                    %>
+
+                </div>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+    <div id="user-list">user</div>
+</div>
+</body>
+</html>

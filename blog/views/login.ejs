@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel='stylesheet' href='/stylesheets/regist.css' />
+</head>
+<body>
+<div id="container">
+<form action="/index" method="post">
+  <p>  用户名：<input type="text" name="name" id="username"/></p>
+  <p>密码：<input type="password"  name="password" id="password"/></p>
+  <input type="submit" value="登陆"/>
+</form>
+</div>
+</body>
+<script src="/javascripts/jquery-1.12.4.min.js"></script>
+<script>
+  $(function(){
+    $('#username').on('blur',function(){
+      if(this.value == ''){
+        $('.erro').remove();
+        $(this).after('<span class="erro">请输入用户名</span>');
+      }
+    });
+  });
+
+</script>
+</html>
